@@ -1,0 +1,17 @@
+{
+  "name": "utils",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 -n ./changelog.ts"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.2.2",
+    "vite-plugin-dts": "^1.7.2",
+    "vite": "^5.0.8",
+    "vue-tsc": "^1.8.25"
+  }
+}
