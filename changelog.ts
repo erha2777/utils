@@ -10,6 +10,8 @@ const options = {
         //   note.title = "重大变化"
         //   discard = false
         // })
+        console.log(commit);
+        
         if (commit.type === "feat") {
           commit.type = "✨ 新功能"
         } else if (commit.type === "fix") {
@@ -32,6 +34,12 @@ const options = {
           commit.type = "👷 构建"
         } else if (commit.type === "ci") {
           commit.type = "🔧 配置"
+        } else {
+          return false
+        }
+
+        if(commit.subject === 'first commit') {
+          return false
         }
   
         if (commit.scope === "*") {
