@@ -10,7 +10,6 @@ const options = {
         //   note.title = "重大变化"
         //   discard = false
         // })
-        console.log(commit);
         
         if (commit.type === "feat") {
           commit.type = "✨ 新功能"
