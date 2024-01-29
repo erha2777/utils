@@ -1,17 +1,47 @@
 {
-  "name": "utils",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "build": "vue-tsc --noEmit && vite build",
-    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 -n ./changelog.ts"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
-    "conventional-changelog-cli": "^2.2.2",
-    "vite-plugin-dts": "^1.7.2",
-    "vite": "^5.0.8",
-    "vue-tsc": "^1.8.25"
-  }
+    "name": "@erha2777/utils",
+    "private": false,
+    "version": "0.0.0",
+    "description": "这里是 js 工具库~",
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "es/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./es/index.js",
+            "require": "./lib/index.js"
+        },
+        "./src": {
+            "import": "./src/index.ts"
+        }
+    },
+    "scripts": {
+        "build": "vue-tsc --noEmit && vite build",
+        "log": "conventional-changelog -p angular -i README.md -s -r 0 -n ./changelog.ts"
+    },
+    "keywords": [
+        "vue3",
+        "utils"
+    ],
+    "files": [
+        "es",
+        "lib"
+    ],
+    "author": "erha2777",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "conventional-changelog-cli": "^2.2.2",
+        "vite-plugin-dts": "^1.7.2",
+        "vite": "^5.0.8",
+        "vue-tsc": "^1.8.25"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/erha2777/utils"
+    },
+    "bugs": {
+        "url": "https://github.com/erha2777/utils/issues"
+    },
+    "homepage": "https://github.com/erha2777/utils#readme"
 }
